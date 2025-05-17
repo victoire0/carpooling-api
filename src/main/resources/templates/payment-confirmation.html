@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement confirmé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="" alt="TujeRide Logo" class="logo" onerror="this.style.display='none'">
+        <h1>TujeRide</h1>
+    </div>
+
+    <div class="content">
+        <h2>Paiement confirmé</h2>
+        <p>Bonjour <span th:text="${passenger.firstName}">utilisateur</span>,</p>
+        <p>Nous confirmons que votre paiement de <strong><span th:text="${amount}">0</span> FBU</strong> a bien été reçu pour le trajet suivant :</p>
+        <ul>
+            <li>Conducteur : <span th:text="${driver.firstName + ' ' + driver.lastName}">Nom Conducteur</span></li>
+            <li>Départ : <span th:text="${ride.departureLocation}">Ville de départ</span></li>
+            <li>Arrivée : <span th:text="${ride.arrivalLocation}">Ville d'arrivée</span></li>
+            <li>Date : <span th:text="${ride.departureTime}">Date</span></li>
+            <li>Nombre de places réservées : <span th:text="${booking.numberOfSeats}">1</span></li>
+            <li>ID Réservation : <span th:text="${booking.id}">0000</span></li>
+        </ul>
+        <p>Merci de votre confiance et bon voyage avec TujeRide !</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <h2>Payment Confirmed</h2>
+        <p>Hello <span th:text="${passenger.firstName}">user</span>,</p>
+        <p>We confirm that your payment of <strong><span th:text="${amount}">0</span> FBU</strong> has been successfully received for the following ride:</p>
+        <ul>
+            <li>Driver: <span th:text="${driver.firstName + ' ' + driver.lastName}">Driver Name</span></li>
+            <li>Departure: <span th:text="${ride.departureLocation}">Departure City</span></li>
+            <li>Arrival: <span th:text="${ride.arrivalLocation}">Arrival City</span></li>
+            <li>Date: <span th:text="${ride.departureTime}">Date</span></li>
+            <li>Seats booked: <span th:text="${booking.numberOfSeats}">1</span></li>
+            <li>Booking ID: <span th:text="${booking.id}">0000</span></li>
+        </ul>
+        <p>Thank you for your trust and have a great trip with TujeRide!</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 TujeRide. Tous droits réservés / All rights reserved.</p>
+    </div>
+</body>
+</html>

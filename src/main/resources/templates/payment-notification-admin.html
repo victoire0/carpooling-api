@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvelle transaction</title>
+</head>
+<body>
+    <h1>Nouvelle transaction effectuée</h1>
+    <p>Une nouvelle transaction a été effectuée sur la plateforme.</p>
+    
+    <h2>Détails de la transaction :</h2>
+    <ul>
+        <li>Passager : <span th:text="${passenger.firstName + ' ' + passenger.lastName}"></span></li>
+        <li>Conducteur : <span th:text="${driver.firstName + ' ' + driver.lastName}"></span></li>
+        <li>Départ : <span th:text="${ride.departureLocation}"></span></li>
+        <li>Arrivée : <span th:text="${ride.arrivalLocation}"></span></li>
+        <li>Date : <span th:text="${ride.departureTime}"></span></li>
+        <li>Nombre de places : <span th:text="${booking.numberOfSeats}"></span></li>
+        <li>Montant : <span th:text="${amount}"></span> FBU</li>
+        <li>ID de la réservation : <span th:text="${booking.id}"></span></li>
+    </ul>
+
+    <p>Cordialement,<br>Système de notification Carpooling</p>
+</body>
+</html> 

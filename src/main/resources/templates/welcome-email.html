@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue à TujeRide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- Si l'image n'existe pas, assurez-vous qu'elle n'empêche pas le chargement de l'email -->
+        <img src="https://exemple.png" alt="TujeRide Logo" class="logo" onerror="this.style.display='none'"-->
+        <h1>TujeRide</h1>
+    </div>
+
+    <div class="content">
+        <h2>Bienvenue sur TujeRide !</h2>
+        <!-- Utilisation correcte de Thymeleaf pour l'insertion de variable -->
+        <p>Cher(e) <span th:text="${firstName}">utilisateur</span>,</p>
+        <p>Nous sommes ravis de vous accueillir dans notre communauté de covoiturage.</p>
+        <p>Avec TujeRide, vous pouvez :</p>
+        <ul>
+            <li>Trouver des trajets facilement</li>
+            <li>Partager vos déplacements</li>
+            <li>Économiser sur vos trajets</li>
+            <li>Rencontrer de nouvelles personnes</li>
+        </ul>
+        <p>N'hésitez pas à explorer notre application et à commencer à partager vos trajets dès aujourd'hui !</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <h2>Welcome to TujeRide!</h2>
+        <p>Dear <span th:text="${firstName}">user</span>,</p>
+        <p>We are delighted to welcome you to our carpooling community.</p>
+        <p>With TujeRide, you can:</p>
+        <ul>
+            <li>Find rides easily</li>
+            <li>Share your journeys</li>
+            <li>Save on your trips</li>
+            <li>Meet new people</li>
+        </ul>
+        <p>Feel free to explore our application and start sharing your rides today!</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 TujeRide. Tous droits réservés / All rights reserved.</p>
+        <p>Pour toute question, contactez-nous à support@tujeride.com</p>
+    </div>
+</body>
+</html>

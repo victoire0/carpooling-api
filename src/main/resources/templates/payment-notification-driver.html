@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouveau paiement reçu</title>
+</head>
+<body>
+    <h1>Nouveau paiement reçu</h1>
+    <p>Bonjour <span th:text="${driver.firstName}"></span>,</p>
+    <p>Un nouveau passager a effectué un paiement pour votre trajet.</p>
+    
+    <h2>Détails du trajet :</h2>
+    <ul>
+        <li>Passager : <span th:text="${passenger.firstName + ' ' + passenger.lastName}"></span></li>
+        <li>Départ : <span th:text="${ride.departureLocation}"></span></li>
+        <li>Arrivée : <span th:text="${ride.arrivalLocation}"></span></li>
+        <li>Date : <span th:text="${ride.departureTime}"></span></li>
+        <li>Nombre de places : <span th:text="${booking.numberOfSeats}"></span></li>
+        <li>Montant reçu : <span th:text="${amount}"></span> FBU</li>
+    </ul>
+
+    <p>Cordialement,<br>L'équipe Carpooling</p>
+</body>
+</html> 

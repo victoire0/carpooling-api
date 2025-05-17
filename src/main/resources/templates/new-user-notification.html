@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvel utilisateur inscrit</title>
+</head>
+<body>
+    <h1>Nouvel utilisateur inscrit</h1>
+    <p>Un nouvel utilisateur vient de s'inscrire sur la plateforme.</p>
+    
+    <h2>Informations de l'utilisateur :</h2>
+    <ul>
+        <li>Nom : <span th:text="${user.firstName + ' ' + user.lastName}"></span></li>
+        <li>Email : <span th:text="${user.email}"></span></li>
+        <li>Rôle : <span th:text="${user.role}"></span></li>
+        <li>Date d'inscription : <span th:text="${user.createdAt}"></span></li>
+    </ul>
+
+    <p>Cordialement,<br>Système de notification Carpooling</p>
+</body>
+</html> 
